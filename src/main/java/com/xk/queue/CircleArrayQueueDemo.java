@@ -1,6 +1,6 @@
 package com.xk.queue;
 
-/**
+/**循环队列演示
  * @author xk
  * @create 2021.07.04 18:24
  */
