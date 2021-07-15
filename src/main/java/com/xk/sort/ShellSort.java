@@ -2,7 +2,7 @@ package com.xk.sort;
 
 import java.util.Arrays;
 
-/**
+/**希尔排序，是插入排序的升级版
  * @author xk
  * @create 2021.07.14 9:07
  */

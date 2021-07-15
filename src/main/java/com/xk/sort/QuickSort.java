@@ -9,11 +9,18 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] arr = {1,2,5,4,0,6};
-        quickSort(arr,0,arr.length-1);
+        int[] arr = {1,2,5,1,0,4,0,6};
+        //quickSort(arr,0,arr.length-1);
+        quickSort2(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 
+    /**
+     * 教程写法
+     * @param arr
+     * @param left
+     * @param right
+     */
     public static void quickSort(int[] arr,int left,int right){
         int l = left;
         int r = right;
@@ -53,6 +60,42 @@ public class QuickSort {
         if(right>l){
             quickSort(arr,l,right);
         }
+
+    }
+
+    /**
+     * 方案
+     * @param arr
+     * @param left
+     * @param right
+     */
+    public static void quickSort2(int[] arr,int left,int right){
+
+        if(left >= right){
+            return;
+        }
+
+        int l = left;
+        int r = right;
+
+        int pivot=arr[left];
+
+        while(l<r){
+            while(l<r&&arr[r] >= pivot){
+                r--;
+            }
+            arr[l] = arr[r];
+
+            while (l<r&&arr[l] <= pivot){
+                l++;
+            }
+            arr[r] = arr[l];
+
+        }
+        arr[l] = pivot;
+
+        quickSort2(arr,left,l-1);
+        quickSort2(arr,l+1,right);
 
     }
 }
