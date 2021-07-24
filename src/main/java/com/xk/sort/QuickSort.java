@@ -2,7 +2,7 @@ package com.xk.sort;
 
 import java.util.Arrays;
 
-/**
+/**快速排序是对冒泡排序的改进
  * @author xk
  * @create 2021.07.14 20:10
  */
